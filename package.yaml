@@ -1,0 +1,54 @@
+name:                hs-concurrency-demos
+version:             0.1.0.0
+github:              "easoncxz/hs-concurrency-demos"
+license:             GPL-3
+author:              "Eason Chen"
+maintainer:          "easoncxz@gmail.com"
+copyright:           "2019 Eason Chen"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/easoncxz/hs-concurrency-demos#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- async
+- stm
+- random
+- ref-fd
+- strict-concurrency
+- deepseq
+
+library:
+  source-dirs: src
+
+executables:
+  hs-concurrency-demos-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - hs-concurrency-demos
+
+tests:
+  hs-concurrency-demos-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - hs-concurrency-demos

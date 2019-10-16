@@ -1,0 +1,82 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 3020427b59baedd85af3c0d1da150e941145b4551dd7b9557f7ae04870ff2552
+
+name:           hs-concurrency-demos
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/easoncxz/hs-concurrency-demos#readme>
+homepage:       https://github.com/easoncxz/hs-concurrency-demos#readme
+bug-reports:    https://github.com/easoncxz/hs-concurrency-demos/issues
+author:         Eason Chen
+maintainer:     easoncxz@gmail.com
+copyright:      2019 Eason Chen
+license:        GPL-3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/easoncxz/hs-concurrency-demos
+
+library
+  exposed-modules:
+      DeadlockDemo
+      Lib
+      RaceConditionDemo
+  other-modules:
+      Paths_hs_concurrency_demos
+  hs-source-dirs:
+      src
+  build-depends:
+      async
+    , base >=4.7 && <5
+    , deepseq
+    , random
+    , ref-fd
+    , stm
+    , strict-concurrency
+  default-language: Haskell2010
+
+executable hs-concurrency-demos-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_hs_concurrency_demos
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      async
+    , base >=4.7 && <5
+    , deepseq
+    , hs-concurrency-demos
+    , random
+    , ref-fd
+    , stm
+    , strict-concurrency
+  default-language: Haskell2010
+
+test-suite hs-concurrency-demos-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_hs_concurrency_demos
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      async
+    , base >=4.7 && <5
+    , deepseq
+    , hs-concurrency-demos
+    , random
+    , ref-fd
+    , stm
+    , strict-concurrency
+  default-language: Haskell2010

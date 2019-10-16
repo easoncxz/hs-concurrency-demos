@@ -1,0 +1,23 @@
+
+language: generic
+
+cache:
+    directories:
+        - $HOME/.stack/
+        - .stack-work
+    timeout: 1000
+
+jobs:
+    include:
+        - stage: "Test"
+          os: linux
+          sudo: false
+          language: minimal
+          install:
+              - which -a stack || ( curl -sSL https://get.haskellstack.org/ | sh )
+              - stack --no-terminal setup
+              - stack --no-terminal test --only-dependencies
+              - du -h -d 3 ~/.stack
+              - du -h -d 3 .stack-work
+          script:
+              - stack --no-terminal test

@@ -1,7 +1,7 @@
 name:                hs-concurrency-demos
 version:             0.1.0.0
 github:              "easoncxz/hs-concurrency-demos"
-license:             GPL-3
+license:             BSD3
 author:              "Eason Chen"
 maintainer:          "easoncxz@gmail.com"
 copyright:           "2019 Eason Chen"

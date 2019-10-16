@@ -1,6 +1,6 @@
 # hs-concurrency-demos
+
 [![Build Status](https://travis-ci.org/easoncxz/hs-concurrency-demos.svg?branch=master)](https://travis-ci.org/easoncxz/hs-concurrency-demos)
------
 
 From the tests you can see code examples. To save you from firing up Haskell
 tools, you can look at test runs on Travis CI by clicking the badge. Currently

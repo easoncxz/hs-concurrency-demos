@@ -96,6 +96,10 @@ exampleAccounting :: IO ()
 exampleAccounting = do
   putStr "IORef... (race conditions here)\t"
   doAccounting iorefInstance (1000, 1000)
+  putStr "IORef... (race conditions here)\t"
+  doAccounting iorefInstance (1000, 1000)
+  putStr "IORef... (race conditions here)\t"
+  doAccounting iorefInstance (1000, 1000)
   putStr "IORef with atomicModifyIORef...\t"
   doAccounting atomicIORefInstance (1000, 1000)
   putStr "MVar...\t"

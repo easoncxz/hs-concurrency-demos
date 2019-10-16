@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 3020427b59baedd85af3c0d1da150e941145b4551dd7b9557f7ae04870ff2552
+-- hash: 903829e239072fdedc668f2868d42fb3986898c0c72fbcef6867cbde7794e869
 
 name:           hs-concurrency-demos
 version:        0.1.0.0
@@ -14,7 +14,7 @@ bug-reports:    https://github.com/easoncxz/hs-concurrency-demos/issues
 author:         Eason Chen
 maintainer:     easoncxz@gmail.com
 copyright:      2019 Eason Chen
-license:        GPL-3
+license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
